@@ -1,0 +1,177 @@
+@import 'responsive'
+
+.wrap
+	padding-top: 70px
+	+media(sm)
+		padding-top: 40px
+	&+section
+		position: relative
+		z-index: 3
+		margin-top: -110px	
+		+media(lgm)
+			margin-top: -75px
+		+media(mdx)
+			margin-top: -65px
+		+media(md)
+			margin-top: -60px
+		+media(sm)
+			margin-top: 30px
+
+	&+section.services
+		margin-top: -92px
+		+media(lgm)
+			margin-top: -72px
+		+media(mdx)
+			margin-top: -65px
+		+media(md)
+			margin-top: -58px
+		+media(sm)
+			margin-top: 30px
+
+.main-header
+	overflow: hidden
+	+media(sm)
+		overflow: visible
+
+	&__wrap
+		position: relative
+
+	&__list
+		display: inline-flex
+		align-items: center
+		border-bottom: 2px solid #fff
+		position: relative
+		z-index: 3
+		&:after
+			position: absolute
+			content: ' '
+			bottom: -2px
+			left: -400%
+			width: 400%
+			height: 2px
+			background-color: #fff
+		+media(sm)
+			display: none
+			width: 100%
+			top: 100%
+			left: 0
+			right: 0px
+			z-index: 3
+			position: absolute
+			max-height: calc(100vh - 70px)
+			overflow-y: auto
+			overflow-x: hidden
+			padding: 0
+			padding-bottom: 10px	
+			background-color: #000
+		li
+			padding: 0 20px
+			+media(md)
+				padding: 0 14px
+			+media(smdx)
+				padding: 0 12px
+			+media(sm)
+				padding: 0px
+
+		li:first-child 
+			padding-left: 0px
+
+		li:last-child
+			padding-right: 0px
+
+	&__link
+		display: block
+		font-size: 18px
+		line-height: 1.67
+		color: #fff
+		text-transform: uppercase
+		padding-bottom: 18px
+		font-weight: 400
+		transition: 0.3s color
+		+media(md)
+			font-size: 17px
+		+media(smdx)
+			font-size: 16px
+		+media(sm)
+			line-height: 1.2
+			padding: 5px 0px
+		&:hover:not(.main-header__link--active)
+			color: #dcee46
+
+		&--active	
+			position: relative
+			+media(sm)
+				color: #dcee46
+			&:after
+				position: absolute
+				content: ' '
+				bottom: 0px
+				left: 0px
+				width: 100%
+				height: 2px
+				background-color: #fff
+				+media(sm)
+					display: none
+
+	&__description
+		font-size: 18px
+		color: #fff
+		font-weight: bold
+		text-transform: uppercase
+		padding-right: 15px
+
+.mobile-wrap
+	display: none
+	align-items: center
+	justify-content: space-between
+	cursor: pointer
+	+media(sm)
+		display: flex
+		width: 100%
+		padding: 7px 20px
+		padding-left: 0px
+		padding-bottom: 8px
+
+.line-burger
+	display: block
+	position: absolute
+	top: 50%
+	left: 0
+	width: 25px
+	height: 3px
+	background-color: #fff
+	transition: 0.5s width
+	&:after,
+	&:before
+		content: ''
+		position: absolute
+		width: 25px
+		height: 3px
+		background-color: #fff
+		left: 0
+		transition: 0.5s
+	&:after
+		top: calc(100% + 5px)
+	&:before
+		bottom: calc(100% + 5px)
+
+.line-active
+	width: 0
+	&:after
+		top: 9px
+		transform: rotate(-45deg)
+		transform-origin: 0 0
+	&:before
+		bottom: 9px
+		transform: rotate(45deg)
+		transform-origin: 0 100%
+
+.main-nav__toggle
+	position: relative
+	cursor: pointer
+	display: none
+	width: 25px
+	height: 25px
+	margin-top: -5px
+	+media(sm)
+		display: block

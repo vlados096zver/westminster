@@ -1,0 +1,82 @@
+@import 'responsive'
+
+.doc
+	padding-bottom: 48px
+	&.doc--page
+		padding-bottom: 98px
+		margin-top: -265px
+		+media(lgm)
+			margin-top: -150px
+		+media(lgxs)
+			margin-top: -190px
+		+media(mdx)
+			padding-bottom: 20px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		padding-top: 80px
+		margin: 0 -20px
+
+	&__item
+		width: calc(100% / 3 - 40px)
+		background-color: #fff
+		padding: 0 40px
+		margin: 0 20px
+		margin-bottom: 42px
+		+media(lgxs)
+			padding: 0 20px
+		+media(mdx)
+			width: calc(100% / 2 - 40px)
+		+media(sm)
+			max-width: 450px
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 42px
+
+	&__title
+		font-size: 24px
+		line-height: 1.5
+		color: #000000
+		padding-top: 48px
+		padding-bottom: 25px
+		font-weight: normal
+
+	&__block
+		display: flex
+		align-items: center
+		flex-wrap: wrap
+		padding-bottom: 23px
+		margin: 0 -13px
+
+	&__elem
+		user-select: none
+		display: block
+		max-width: 50px
+		width: 100%
+		min-height: 50px
+		text-transform: uppercase
+		border: 2px solid #dcee46
+		border-radius: 25px
+		text-align: center
+		margin: 0 13px
+		margin-bottom: 25px
+		&--pdf
+			max-width: 102px
+			font-size: 24px
+			line-height: 1.172
+			color: #333333
+			padding: 9px 4px
+
+		&--view,
+		&--load
+			background-position: center
+			background-repeat: no-repeat
+
+		&--view
+			background-image: url(img/icons/view.svg)
+			background-size: 30px 19px
+
+		&--load
+			background-image: url(img/icons/load.svg)
+			background-size: 30px 

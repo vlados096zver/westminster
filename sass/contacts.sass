@@ -1,0 +1,53 @@
+@import 'responsive'
+
+.contacts
+	margin-bottom: 90px
+	+media(mdx)
+		margin-bottom: 75px
+	+media(sm)
+		margin-bottom: 60px
+
+	&__wrap
+		max-width: 780px
+		padding-top: 78px
+		margin: 0 auto
+
+	&__item
+		margin-bottom: 24px
+
+	&__block
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__label
+		user-select: none
+		cursor: pointer
+		display: inline-block
+		font-size: 18px
+		line-height: 1.2
+		color: #dcee46
+		text-transform: uppercase
+		margin-bottom: 15px
+		font-weight: 900
+
+	&__required
+		font-size: 18px
+		line-height: 1.2
+		color: #fff
+		text-transform: uppercase
+		margin-bottom: 15px
+
+	&__info
+		font-size: 18px
+		line-height: 1.17
+		text-transform: uppercase
+		text-align: center
+		color: #dcee46
+		padding-top: 23px
+
+	&__error
+		color: #b00
+		text-transform: uppercase
+		padding-bottom: 12px
+		font-weight: 900

@@ -1,0 +1,37 @@
+@import 'responsive'
+
+.conditions
+	margin-bottom: 94px
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		align-items: flex-end
+		.title
+			padding-right: 78px
+			margin-bottom: 35px
+
+	&__text
+		position: relative
+		top: -14px
+		font-size: 36px
+		line-height: 1.17
+		color: #dcee46
+		text-transform: uppercase
+		margin-bottom: 35px
+		font-weight: 900
+		+media(md)
+			font-size: 24px
+
+	&__desc
+		padding-bottom: 78px
+		+media(md)
+			padding-bottom: 45px
+		p
+			font-size: 18px
+			line-height: 1.67
+			color: #fff
+			text-align: justify
+			text-transform: uppercase	
+			+media(md)
+				font-size: 17px
+				text-align: left

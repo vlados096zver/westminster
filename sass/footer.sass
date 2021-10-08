@@ -1,0 +1,151 @@
+@import 'responsive'
+
+.main-footer
+	overflow: hidden
+	padding-bottom: 52px
+	&__wrap
+		display: flex
+		justify-content: flex-end
+		margin-left: auto
+		margin-bottom: 90px
+		+media(sm)
+			margin-bottom: 35px
+		
+	&__list
+		display: inline-flex
+		align-items: center
+		border-bottom: 2px solid #fff
+		position: relative
+		z-index: 3
+		+media(sm)
+			flex-wrap: wrap
+			justify-content: center
+			border: none
+		&:before
+			position: absolute
+			content: ' '
+			bottom: -2px
+			right: -400%
+			width: 400%
+			height: 2px
+			background-color: #fff
+			+media(sm)
+				display: none
+		li
+			padding: 0 20px
+			+media(md)
+				padding: 0 14px
+			+media(smdx)
+				padding: 0 12px
+
+		li:first-child 
+			padding-left: 0px
+
+		li:last-child
+			padding-right: 0px
+
+	&__link
+		display: block
+		font-size: 18px
+		line-height: 1.67
+		color: #fff
+		text-transform: uppercase
+		padding-bottom: 18px
+		font-weight: 400
+		transition: 0.3s color
+		+media(md)
+			font-size: 17px
+		+media(smdx)
+			font-size: 16px
+		+media(sm)
+			padding-bottom: 5px
+			margin-bottom: 17px
+		&:hover:not(.main-footer__link--active)
+			color: #dcee46
+
+		&--active	
+			position: relative
+			&:after
+				position: absolute
+				content: ' '
+				bottom: 0px
+				left: 0px
+				width: 100%
+				height: 2px
+				background-color: #fff
+
+	&__block
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+		margin: 0 -30px
+
+	&__phone
+		font-size: 48px
+		line-height: 1.17
+		color: #dcee46
+		margin: 0 30px
+		margin-bottom: 60px
+		font-weight: 200
+		+media(mdx)
+			font-size: 38px
+			margin-bottom: 50px
+		+media(sm)
+			font-size: 30px
+			margin-bottom: 40px
+
+	&__email
+		font-size: 24px
+		line-height: 1.17
+		color: #dcee46
+		text-align: center
+		text-transform: uppercase
+		margin-bottom: 60px
+		+media(mdx)
+			font-size: 22px
+		+media(sm)	
+			font-size: 20px
+
+	&__desc
+		max-width: 560px
+		margin: 0 auto
+		margin-bottom: 16px
+		p
+			font-size: 18px
+			line-height: 1.17
+			color: #fff
+			text-align: center
+			white-space: pre-line
+			text-transform: uppercase
+			padding-bottom: 2em
+			+media(mdx)
+				font-size: 17px
+
+	&__text
+		font-size: 14px
+		line-height: 1.2
+		color: #dcee46
+		text-transform: uppercase
+		text-align: center
+		font-weight: bold
+
+.msg-modal
+	position: fixed
+	top: 30%
+	left: calc(50% - 150px)
+	width: 300px
+	padding: 20px 30px
+	border-radius: 15px
+	text-align: center
+	background-color: #dcee46
+	color: #fff
+	opacity: 0
+	visibility: hidden
+	font-size: 18px
+	line-height: 1.5
+	border-radius: 5px
+	z-index: 20
+	transition: 0.3s visibility, 0.3s opacity
+	&-active
+		opacity: 1
+		visibility: visible
