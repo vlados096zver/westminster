@@ -173,6 +173,7 @@ img {
 	line-height: 1.17;
 	-webkit-text-stroke: 2px #dcee46;
 	-webkit-text-fill-color: transparent;
+	text-stroke: 2px #dcee46;
 	text-transform: uppercase;
 	font-family: Roboto;
 	font-weight: 900;
@@ -513,6 +514,7 @@ img {
 }
 
 .main-footer__phone {
+	display: block;
 	font-size: 48px;
 	line-height: 1.17;
 	color: #dcee46;
@@ -522,6 +524,7 @@ img {
 }
 
 .main-footer__email {
+	display: block;
 	font-size: 24px;
 	line-height: 1.17;
 	color: #dcee46;
@@ -883,6 +886,11 @@ img {
 	text-align: center;
 	margin: 0 13px;
 	margin-bottom: 25px;
+	transition: 0.3s background-color;
+}
+
+.doc__elem:hover {
+	background-color: #dcee46;
 }
 
 .doc__elem--pdf {
@@ -1187,7 +1195,7 @@ img {
 }
 
 .wrap {
-	padding-top: 40px;
+	padding-top: 0px;
 }
 
 .wrap + section {
@@ -1200,6 +1208,20 @@ img {
 
 .main-header {
 	overflow: visible;
+	position: fixed;
+	top: 0px;
+	z-index: 15;
+	width: 100%;
+	background-color: #000000;
+}
+
+.main-header + section {
+	padding-top: 76px;
+}
+
+.main-header__wrap {
+	padding-top: 40px;
+	padding-bottom: 20px;
 }
 
 .main-header__list {
@@ -1238,8 +1260,7 @@ img {
 .mobile-wrap {
 	display: flex;
 	width: 100%;
-	padding: 7px 20px;
-	padding-left: 0px;
+	padding: 7px 0px;
 	padding-bottom: 8px;
 }
 
@@ -1320,6 +1341,10 @@ img {
 
 .contacts {
 	margin-bottom: 60px;
+}
+
+.doc__wrap {
+	margin: 0px;
 }
 
 .doc__item {

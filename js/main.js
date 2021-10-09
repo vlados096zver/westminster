@@ -20,35 +20,38 @@ $(document).ready(function() {
     return false;
   });
 
-  const swiper = new Swiper('.swiper', {
-    loop: false,
-    spaceBetween: 80,
-    slidesPerView: 7,
-    autoplay: {
-     delay: 2000,
-    },
-    breakpoints: {
-      340: {
-        slidesPerView: 2,
+  if(window.Swiper) {
+    const swiper = new Swiper('.swiper', {
+      loop: false,
+      spaceBetween: 80,
+      slidesPerView: 7,
+      autoplay: {
+       delay: 2000,
       },
-      480: {
-        slidesPerView: 3,
-      },
-      740: {
-        slidesPerView: 4,
-      },
-      1050: {
-        slidesPerView: 5,
-        spaceBetween: 40,
-      },
-      1250: {
-        slidesPerView: 6,
-      },
-      1350: {
-        slidesPerView: 7,
-      },
-    }
-  });
+      breakpoints: {
+        340: {
+          slidesPerView: 2,
+        },
+        480: {
+          slidesPerView: 3,
+        },
+        740: {
+          slidesPerView: 4,
+        },
+        1050: {
+          slidesPerView: 5,
+          spaceBetween: 40,
+        },
+        1250: {
+          slidesPerView: 6,
+        },
+        1350: {
+          slidesPerView: 7,
+        },
+      }
+    });
+
+  }
 
   function validate(input, length, regExp, error, phone) {
 

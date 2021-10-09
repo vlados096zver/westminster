@@ -3,7 +3,7 @@
 .wrap
 	padding-top: 70px
 	+media(sm)
-		padding-top: 40px
+		padding-top: 0px
 	&+section
 		position: relative
 		z-index: 3
@@ -32,9 +32,21 @@
 	overflow: hidden
 	+media(sm)
 		overflow: visible
+		position: fixed
+		top: 0px
+		z-index: 15
+		width: 100%
+		background-color: #000000
+
+	&+section
+		+media(sm)
+			padding-top: 76px
 
 	&__wrap
 		position: relative
+		+media(sm)
+			padding-top: 40px	
+			padding-bottom: 20px	
 
 	&__list
 		display: inline-flex
@@ -128,8 +140,7 @@
 	+media(sm)
 		display: flex
 		width: 100%
-		padding: 7px 20px
-		padding-left: 0px
+		padding: 7px 0px
 		padding-bottom: 8px
 
 .line-burger
